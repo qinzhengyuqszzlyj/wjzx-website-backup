@@ -1,0 +1,344 @@
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>闵行教育---基础教育信息公开列表页</title>
+<link rel="stylesheet" type="text/css" href="https://xxgk.mhedu.sh.cn/liebiao/css/index.css">
+<link type="text/css" rel="stylesheet" href="https://xxgk.mhedu.sh.cn/fwxxgk/css/style.css" />
+<link type="text/css" rel="stylesheet" href="https://xxgk.mhedu.sh.cn/fwxxgk/css/lieb.css" >
+<link type="text/css" rel="stylesheet" href="https://xxgk.mhedu.sh.cn/fwxxgk/css/ccs_menu-css.css">
+<link type="text/css" rel="stylesheet" href="https://xxgk.mhedu.sh.cn/wcm.files/js/jquery-plugin/zTreeStyle/zTreeStyle.css">
+<script type="text/javascript" src="https://xxgk.mhedu.sh.cn/wcm.files/js/jquery.js"></script>
+<script type="text/javascript" src="https://xxgk.mhedu.sh.cn/wcm.files/js/java.js"></script>
+<script type="text/javascript" src="https://xxgk.mhedu.sh.cn/wcm.files/js/jsonrpc.js"></script>
+<script type="text/javascript" src="https://xxgk.mhedu.sh.cn/wcm.files/js/jquery-plugin/jquery.ztree-2.6.min.js"></script>
+<script type="text/javascript" src="https://xxgk.mhedu.sh.cn/fwxxgk/jcxxgk.js"></script>
+<script type="text/javascript" src="https://xxgk.mhedu.sh.cn/fwxxgk/js/qpxxgk.js" ></script>
+<script type="text/javascript" src="https://xxgk.mhedu.sh.cn/fwxxgk/js/jjs_menu_min.js" ></script>
+          <script type="text/javascript">
+$(document).ready(function(){
+
+	$("#firstpane .menu_body:eq(0)").show();
+	$("#firstpane h3.menu_head").click(function(){
+		$(this).addClass("current").next("div.menu_body").slideToggle(300).siblings("div.menu_body").slideUp("slow");
+		$(this).siblings().removeClass("current");
+	});
+	
+	$("#secondpane .menu_body:eq(0)").show();
+	$("#secondpane h3.menu_head").mouseover(function(){
+		$(this).addClass("current").next("div.menu_body").slideDown(500).siblings("div.menu_body").slideUp("slow");
+		$(this).siblings().removeClass("current");
+	});
+	
+});
+</script>
+<script type="text/javascript">
+var Qpedu_InfoBeanRPC = jsonrpc.Qpedu_InfoBeanRPC;
+var cat_id = "4";
+var node_id = "972";
+var type = "";
+var deptanme = "基础教育机构信息公开专栏";
+var deptanme1 = "上海市吴泾中学";
+$(document).ready(function (){
+
+   if(node_id != "")
+   {
+        $("#jgLists").hide();
+        $("#deptanme").html(deptanme1);
+   }
+
+	$("#deptanme").html(deptanme);
+	$("#deptanme1").html(deptanme1);
+    $(".menu1 ul li").menu();
+  
+   
+}); 
+
+
+function search()
+{
+	var url = "";
+	var flag = true;
+	var keywords = $("#keywords").val();
+	if(keywords =="" || keywords == null){
+		alert("查询关键字不能为空！");
+		flag = false;
+		return;
+	}
+    if(flag){
+    	keywords = encodeURI(encodeURI(keywords));
+    	if(node_id == "" || node_id == null){
+    		url ="http://xxgk.mhedu.sh.cn/fwxxgk/search.jsp?keywords="+keywords;
+    	}else{
+    		url ="http://xxgk.mhedu.sh.cn/fwxxgk/search.jsp?keywords="+keywords+"&node_id="+node_id;
+    	}
+		window.open(url);
+    }
+}
+function search1()
+{
+	var url = "";
+	var flag = true;
+	var keywords = $("#keywords1").val();
+	if(keywords =="" || keywords == null){
+		alert("查询关键字不能为空！");
+		flag = false;
+		return;
+	}
+    if(flag){
+    	keywords = encodeURI(encodeURI(keywords));
+    	if(node_id == "" || node_id == null){
+    		url ="http://xxgk.mhedu.sh.cn/fwxxgk/search.jsp?keywords="+keywords;
+    	}else{
+    		url ="http://xxgk.mhedu.sh.cn/fwxxgk/search.jsp?keywords="+keywords+"&node_id="+node_id;
+    	}
+		window.open(url);
+    }
+}
+</script>
+
+</head>
+<body style="background:#ededed">
+ <script type="text/javascript">
+  var w=screen.width;
+if(w<=1025)document.write('<link rel="stylesheet" type="text/css" href="https://www.mhedu.sh.cn/iphone/css/base_phone.css"/>');
+else if(w>1025)document.write('<link rel="stylesheet" type="text/css" href="https://www.mhedu.sh.cn/newmhjy/css/base.css"/>');
+ 
+  $(function(){
+      /*导航默认*/
+    $('.nav li a').each(function(){
+    if(this.href==window.location.href)
+      $(this).addClass('indexSelect'); 
+  });
+   
+      /*互动左侧栏默认*/
+    $('.Newleftlist li a').each(function(){
+    if(this.href==window.location.href)
+      $(this).addClass('hdSelect'); 
+  });
+     $(".cl-effect-18 a").click(function(){
+    $(".cl-effect-18 a").toggleClass("select");
+    $(".cl-effect-18 a div.middlexian").toggleClass("xianYinca");
+     $(".sj_bannar").slideToggle(200);
+   })  
+    $(".tail_title").click(function(){
+   $(this).next(".taillist").slideToggle().siblings(".taillist").slideUp();
+ })
+  
+  })
+
+  </script> 
+  
+
+ <!--导航条开始  -->
+ <a href="http://www.mhedu.sh.cn/info/iList.jsp?tm_id=351"><img src="http://www.mhedu.sh.cn/iphone/images/sj_logo.png" style="max-width:160px;" class="imgIhone"></a>
+ <div class="cl-effect-18"><a href="https://xxgk.mhedu.sh.cn/fwxxgk/list.htm#"><div class="middlexian"></div></a></div>
+<div class="indexBannar_wrapper">
+  <div class="indexBannar">
+    <div class="index_logo mh_head">
+      <a href="http://www.mhedu.sh.cn"><img src="http://www.mhedu.sh.cn/newmhjy/images/logo2.png" width="142" height="" class="imgPC"></a>   
+    </div>
+    <div class="indexBannar_1 sj_bannar">
+      <!--<ul class="nav">
+        <li><a href="/" class="indexBa01">首&nbsp;页</a></li>
+        <li><a href="/xwzx/" >新闻中心</a><b><img src="/iphone/images/bu2.png"></b></li>
+        <li><a href="/xxgk/" >信息公开</a><b><img src="/iphone/images/bu2.png"></b></li>
+        <li><a href="/zwdt/" >政务大厅</a><b><img src="/iphone/images/bu2.png"></b></li>
+        <li><a href="/hdpt/" >互动平台</a><b><img src="/iphone/images/bu2.png"></b></li>
+        <li><a href="/jyzt/" >教育专题</a><b><img src="/iphone/images/bu2.png"></b></li>
+        <li class="dnUsually"><a href="/English.htm" >英文版</a><b><img src="/iphone/images/bu2.png"></b></li>
+      </ul>-->
+      <ul class="nav">
+        <li><a href="http://www.mhedu.sh.cn" class="indexBa01 indexSelect">首&nbsp;页</a></li>
+        <li><a target="_blank" href="http://www.shmh.gov.cn/shmh/ggl-jyj/index.html">通知公告</a><b><img src="http://www.mhedu.sh.cn/iphone/images/bu2.png"></b></li>
+        <li><a target="_blank" href="http://www.shmh.gov.cn/shmh/jyj/index.html">教育新闻</a><b><img src="http://www.mhedu.sh.cn/iphone/images/bu2.png"></b></li>
+        <li><a target="_blank" href="http://xxgk.shmh.gov.cn/mhxxgkweb/html/mh_xxgk/xxgk_jyj/List/index.htm">政务公开</a><b><img src="http://www.mhedu.sh.cn/iphone/images/bu2.png"></b></li>
+            </ul>
+    </div>
+    <div class="indexBannar_2">
+      <form id="searchform" name="searchform" action="http://www.mhedu.sh.cn/search/searchResultGJ.jsp" method="get"> 
+      <table width="200" border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+      <td valign="top"><input id="q" name="q" type="text" class="search_Text" value="" style="width:161px;border:0px;background-color: transparent;outline:none;margin-left:10px;line-height:20px; " title="请输入关键字查询" placeholder="请输入关键字查询"> 　</td>
+      <td valign="top"> <input type="submit" value="" style="width:30px;background-color:transparent;  height:20px;border:0px;cursor:pointer;">　</td>
+      </tr>
+      </tbody>
+      </table>   
+      <input type="hidden" value="264" name="t_id">　 
+      <input type="hidden" value="" name="type">
+      <input type="hidden" value="" name="categoryId">
+      <input type="hidden" value="" name="site_id">
+      </form>
+    </div>
+    <div class="indexBannar_3" style="background:none">
+      <a href="javascript:StranBody()" id="StranLink" name="StranLink" class="inde_zw" title="點擊以繁體中文方式瀏覽">中文繁體</a>&nbsp;
+      <a id="translateLink" href="http://english.shmh.gov.cn/" target="_blank">English</a>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<!--导航条结束  -->
+  <div class="clear bannarBlank" ></div>
+  <div class="etbb">
+  <div  class="edbg">
+      <span id="deptanme">
+     
+    </span>
+    </div>
+</div>
+
+  <!-- 当前位置开始 -->
+  <div class="dqwz" style="width: 1100px;margin: auto;height: 28px;line-height: 28px;color: #666666;font-family: "微软雅黑";font-size: 12px;"> 当前位置：
+  
+  <a target="_blank"  href="https://xxgk.mhedu.sh.cn/fwxxgk/index.jsp?node_id=972&amp;cat_id=4&amp;xxid=526">上海市吴泾中学基础教育机构信息公开专栏 </a>>列表页</div>
+  
+  </div>
+<!-- 当前位置结束 --> 
+<!-- 主体开始 -->
+<div class="cont_wrapper"> 
+  <!--内容部分 开始 -->
+  <div class="xxgk_kuangjia">
+    <div class="xxgk_leftZ" style="overflow-y: scroll;">
+      <div class="Newsecond_title">信息公开专栏</div>
+      <!--政府信息公开-->
+      <div id="firstpane" class="menu_list">
+        <h3 class="menu_head  current">基础工作</h3>
+        <div style="display:none" class="menu_body"> 
+        <a target="rightFrame" href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=8" >信息公开指南</a>
+         <a target="rightFrame" href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList1.jsp?node_id=972&amp;cat_id=9" >信息公开目录</a>
+         <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=63">信息公开监督渠道</a>
+         </div>
+        <h3 class="menu_head">学校基本情况</h3>
+        <div style="display:none" class="menu_body"> 
+        <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=21">学校概况</a> 
+        <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=22">学校领导及机构设置</a> 
+        <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=23">制度规范</a> 
+        <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=24">规划计划</a> 
+        <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=25">联系方式</a> 
+        </div>
+        <h3 class="menu_head">学校行政管理</h3>
+        <div style="display:none" class="menu_body">
+        <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=26">重要活动、会议安排</a>  
+        <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=27">教学工作</a> 
+        <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=28">德育建设</a>
+         <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=48">学校体育</a> 
+        <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=49">学校美育</a>
+        <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=62">校内课后服务</a>   
+        <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=29">招生工作</a> 
+         <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=30">毕业生工作</a>
+             <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=36">教研科研</a>   
+        <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=31">资产管理</a> 
+         <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=32">财务管理</a> 
+         <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=33">后勤服务</a> 
+        <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=34">校园安全</a> 
+
+        </div>
+        <h3 class="menu_head">教师工作</h3>
+        <div style="display:none" class="menu_body"> 
+        <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=35">队伍建设</a> 
+         <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=50">教师培训</a>
+         <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=64">教师职称</a>
+       <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=51">教师评优</a>
+      <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=37">教师招聘</a>
+
+         </div>
+        <h3 class="menu_head">学生工作</h3>
+        <div style="display:none" class="menu_body"> 
+        <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=38">学籍管理</a> 
+        <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=39">帮困助学</a>
+        <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=40">学生评优</a> 
+          <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=41">团队活动</a>
+          <a target="rightFrame"  href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=42">主题活动</a>
+           </div>
+       
+      </div>
+      <!--政府信息公开-->
+      
+      <div class="Newsecond_title" style="margin-top:20px;">&emsp;&emsp;办事服务与交流互动</div>
+      
+      <!--政府信息公开-->
+      <div class="zfxxgkn">
+        <ul>
+         <h3 class="menu_head" style="background:#00c3c6;color:#fff">服务</h3>
+          <li><a target="rightFrame" href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=20" >办事指南</a></li>
+          <li><a target="rightFrame" href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=43">便民问答</a></li>
+          <li><a target="rightFrame" href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=44">表格下载</a></li>
+          
+           <h3 class="menu_head" style="background:#00c3c6;color:#fff">互动</h3>
+          <li><a target="_blank" href="http://www.mhedu.sh.cn/appeal/form.jsp?model_id=7&do_dept=" id="wszx">网上咨询</a></li>
+          <li><a target="rightFrame" href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=47">家校互动</a></li>
+          <li><a target="rightFrame" href="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=45">校长信箱</a></li>
+        </ul>
+      </div>
+      <!--政府信息公开--> 
+      
+    </div>
+    <!--右边内容 开始 --> 
+      <div class="xxgk_leftR" style="background:#fff">
+      <iframe id="rightFrame" name="rightFrame" src="https://xxgk.mhedu.sh.cn/fwxxgk/infoList.jsp?node_id=972&amp;cat_id=4" width="100%" height="700" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" allowTransparency="true"></iframe>
+    </div>
+    <!--右边内容 结束 --> 
+    
+  </div>
+  <!--内容部分 结束 --> 
+</div>
+<!-- 主体结束 -->
+<div class="clear"></div>
+<!-- 尾部开始 -->
+<div class="foot">
+<div class="foott">
+<div class="foottl">
+版权所有：上海市闵行区教育局  技术服务：闵行区教育信息中心<br />
+地址：上海市闵行区七莘路400号    邮编：201199
+</div>
+<div class="foottr">
+<div class="index_wzxx">
+       <div class="index_wzxx1"><a><img src="https://xxgk.mhedu.sh.cn/images/blue.png" width="80"></a></div>
+       <div class="indexxWrap">
+       <table width="210" border="0" cellspacing="0" cellpadding="0">
+         <tbody><tr>
+           <td valign="top" width="30"><div class="index_wzxx2"><img src="https://xxgk.mhedu.sh.cn/fwxxgk/images/mhjy_141.jpg" width="18"></div></td>
+           <td valign="top" width="170"><div class="index_wzxx3"><a style="color:#ffffff;" target="_blank" href="http://www.beian.miit.gov.cn">沪ICP备05012047号-1</a></div></td>
+         </tr>
+         <tr>
+           <td valign="top"><div class="index_wzxx2"><img src="https://xxgk.mhedu.sh.cn/fwxxgk/images/ghs.png" width="18"></div></td>
+           <td valign="top"> <div class="index_wzxx3"><a style="color:#ffffff;" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011202004973">沪公网安备31011202004973号</a></div></td>
+         </tr>
+         </tbody></table>
+
+       </div>
+  
+     </div>
+</div>
+</div>
+</div>
+<!-- 尾部结束 -->
+<script src="https://xxgk.mhedu.sh.cn/fwxxgk/js/commonJianFanTran.js"></script>
+
+
+</body>
+
+  <script>
+  function GetQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
+}
+  var nodeID=GetQueryString("node_id");
+//if(nodeID=823){document.getElementById("wszx").setAttribute("href","http://www.mhjy.gov.cn/appeal/form.jsp?model_id=9&do_dept=277"); }
+if(nodeID>=823 && nodeID<=894){document.getElementById("wszx").setAttribute("href","http://www.mhedu.sh.cn/appeal/form.jsp?model_id=7&do_dept="+(nodeID-596)); }
+else if(nodeID>=895 && nodeID<=902){document.getElementById("wszx").setAttribute("href","http://www.mhedu.sh.cn/appeal/form.jsp?model_id=7&do_dept="+(nodeID-595)); }
+else if(nodeID>=903 && nodeID<=905){document.getElementById("wszx").setAttribute("href","http://www.mhedu.sh.cn/appeal/form.jsp?model_id=7&do_dept="+(nodeID-594)); }
+else if(nodeID>=906 && nodeID<=908){document.getElementById("wszx").setAttribute("href","http://www.mhedu.sh.cn/appeal/form.jsp?model_id=7&do_dept="+(nodeID-593)); }
+else if(nodeID>=909 && nodeID<=932){document.getElementById("wszx").setAttribute("href","http://www.mhedu.sh.cn/appeal/form.jsp?model_id=7&do_dept="+(nodeID-592)); }
+else if(nodeID>=933 && nodeID<=948){document.getElementById("wszx").setAttribute("href","http://www.mhedu.sh.cn/appeal/form.jsp?model_id=7&do_dept="+(nodeID-591)); }
+else if(nodeID>=949 && nodeID<=981){document.getElementById("wszx").setAttribute("href","http://www.mhedu.sh.cn/appeal/form.jsp?model_id=7&do_dept="+(nodeID-590)); }
+else if(nodeID>=1101 && nodeID<=1102){document.getElementById("wszx").setAttribute("href","http://www.mhedu.sh.cn/appeal/form.jsp?model_id=7&do_dept="+(nodeID-708)); }
+else{}
+
+  </script>
+</html>
